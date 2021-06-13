@@ -92,10 +92,12 @@ export default CommonStyles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         height: 50,
+        backgroundColor:'#ffffff',
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 30,
-        marginBottom: 20,
+        marginBottom: 5
+       
     },
     viewClose:{
         backgroundColor:'#820000',
