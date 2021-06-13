@@ -48,11 +48,11 @@ export default function Login(props) {
                 secureTextEntry={true}
                 onChange={(e) => onChange(e, 'password')}
             />
-            <TouchableOpacity onPress={login}>
+            <TouchableOpacity onPress={login} style={StylesComunes.btnContent}>
                 <Text style={StylesComunes.btnText}>Iniciar Sesión</Text>
             </TouchableOpacity>
             <View style={StylesComunes.registrarse}>
-            <TouchableOpacity  onPress={changeForm}>
+            <TouchableOpacity  onPress={changeForm} style={StylesComunes.btnContent2}>
                 <Text style={StylesComunes.btnText}>Registrarse</Text>
             </TouchableOpacity>
             </View>

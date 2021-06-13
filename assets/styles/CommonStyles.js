@@ -3,18 +3,31 @@ import { StyleSheet } from 'react-native';
 export default CommonStyles = StyleSheet.create({
     input: {
         height: 40,
-        color: '#fff',
+        color: '#000000',
         width: '80%',
         marginBottom: 25,
-        backgroundColor: '#1e3040',
         paddingHorizontal: 20,
         borderRadius: 50,
         fontSize: 18,
-        borderWidth: 1,
+        borderBottomWidth: 1,
         borderColor: '#1e3040'
     },
+    btnContent:{
+        borderRadius: 25,
+        padding:10,
+        backgroundColor: '#1f4f8d',
+        borderColor: '#1f4f8d',
+        borderWidth:1
+    },
+    btnContent2:{
+        borderRadius: 25,
+        padding:10,
+        backgroundColor: '#d8a633',
+        borderColor: '#d8a633',
+        borderWidth:1
+    },
     btnText: {
-        color: '#000000',
+        color: '#ffffff',
         fontSize: 18,
     },
     registrarse: {
@@ -44,7 +57,7 @@ export default CommonStyles = StyleSheet.create({
         backgroundColor: '#559204',
     },
     current: {
-        backgroundColor: '#1ae1f2',
+        backgroundColor: '#446c9e',
     },
     pasado: {
         backgroundColor:'#820000',
@@ -96,7 +109,7 @@ export default CommonStyles = StyleSheet.create({
         textAlign:'center'
     },
     viewAdd:{
-        backgroundColor: '#1ea1f2',
+        backgroundColor: '#446c9e',
         borderRadius: 50,
         paddingHorizontal:30,
         paddingVertical:10,

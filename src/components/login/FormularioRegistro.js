@@ -72,12 +72,12 @@ export default function FormularioRegistro(props) {
                 onChange={(e) => onChange(e,'repeatPassword')}
             />
 
-            <TouchableOpacity onPress={registrarse}>
+            <TouchableOpacity onPress={registrarse} style={StylesComunes.btnContent}>
                 <Text style={StylesComunes.btnText}>Registrarse</Text>
             </TouchableOpacity>
 
             <View style={StylesComunes.login}>
-                <TouchableOpacity onPress={changeForm}>
+                <TouchableOpacity onPress={changeForm} style={StylesComunes.btnContent2}>
                     <Text style={StylesComunes.btnText}>Iniciar sesión</Text>
                 </TouchableOpacity>
             </View>

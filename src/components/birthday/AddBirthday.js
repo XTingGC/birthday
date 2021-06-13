@@ -83,7 +83,7 @@ export default function AddBirthday(props) {
                 onChange={(evento)=>onChange(evento, 'apellidos')}
                 />
                 <View style={[StylesComunes.input, StylesComunes.datepicker, formError.dateBirth && {borderColor: '#940c0c'}]}>
-                    <Text style={{color: formData.dateBirth ? '#fff' : '#969696', fontSize: 18,}} 
+                    <Text style={{color: formData.dateBirth ? '#000000' : '#969696', fontSize: 18,}} 
                         onPress={() => setIsDatePicketVisible(true)}>
                         {formData.dateBirth 
                             ? moment(formData.dateBirth).format('LL')
@@ -91,7 +91,7 @@ export default function AddBirthday(props) {
                         }
                     </Text>
                 </View>
-                <TouchableOpacity onPress={onSubmit}>
+                <TouchableOpacity onPress={onSubmit} style={StylesComunes.btnContent}>
                     <Text style={StylesComunes.addBtn}>Crear Cumpleaños</Text>
                 </TouchableOpacity>
             </View>
