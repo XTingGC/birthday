@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { StyleSheet ,View, Text, Image } from 'react-native';
-import Login from '../Login';
-import FormularioRegistro from '../../screens/birthday/FormularioRegistro';
+import Login from '../../components/login/Login';
+import FormularioRegistro from '../../components/login/FormularioRegistro';
 
 export default function Autentificacion() {
     const [isLogin, setIsLogin] = useState(true);
@@ -12,7 +12,7 @@ export default function Autentificacion() {
 
     return (
         <View style={styles.view}>
-            <Image style={styles.logo} source={require('../../../assets/logo.png')}/>
+            <Image style={styles.logo} source={require('../../../assets/img/logo.png')}/>
             {isLogin ? <Login changeForm={changeForm}/> : <FormularioRegistro changeForm={changeForm}/>}
         </View>
     )

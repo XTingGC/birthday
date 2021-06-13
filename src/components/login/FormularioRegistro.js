@@ -7,7 +7,8 @@ import {
     TextInput
 } from 'react-native';
 import { validateEmail } from '../../utils/validaciones';
-import firebase from '../../utils/firebase'
+import firebase from '../../utils/firebase';
+import CommonStyles from '../../../assets/styles/CommonStyles';
 
 export default function FormularioRegistro(props) {
     const { changeForm } = props;
@@ -49,13 +50,13 @@ export default function FormularioRegistro(props) {
     return (
         <>
             <TextInput
-                style={[styles.input, formError.email && styles.error]}
+                style={[StylesComunes.input, formError.email && StylesComunes.error]}
                 placeholder="Correo electrónico"
                 placeholderTextColor="#969696"
                 onChange={(e) => onChange(e, 'email')}
             />
             <TextInput
-                style={[styles.input, formError.password && styles.error]}
+                style={[StylesComunes.input, formError.password && StylesComunes.error]}
                 placeholder="Contraseña"
                 placeholderTextColor="#969696"
                 //para que la contraseña este en puntos
@@ -63,7 +64,7 @@ export default function FormularioRegistro(props) {
                 onChange={(e) => onChange(e,'password')}
             />
             <TextInput
-                style={[styles.input, formError.repeatPassword && styles.error]}
+                style={[StylesComunes.input, formError.repeatPassword && StylesComunes.error]}
                 placeholder="Repetir contraseña"
                 placeholderTextColor="#969696"
                 //para que la contraseña este en puntos
@@ -72,12 +73,12 @@ export default function FormularioRegistro(props) {
             />
 
             <TouchableOpacity onPress={registrarse}>
-                <Text style={styles.btnText}>Registrarse</Text>
+                <Text style={StylesComunes.btnText}>Registrarse</Text>
             </TouchableOpacity>
 
-            <View style={styles.login}>
+            <View style={StylesComunes.login}>
                 <TouchableOpacity onPress={changeForm}>
-                    <Text style={styles.btnText}>Iniciar sesión</Text>
+                    <Text style={StylesComunes.btnText}>Iniciar sesión</Text>
                 </TouchableOpacity>
             </View>
 
@@ -93,30 +94,5 @@ function defaultValue() {
     }
 }
 
-const styles = StyleSheet.create({
-    input: {
-        height: 40,
-        color: '#fff',
-        width: '80%',
-        marginBottom: 25,
-        backgroundColor: '#1e3040',
-        paddingHorizontal: 20,
-        borderRadius: 50,
-        fontSize: 18,
-        borderWidth: 1,
-        borderColor: '#1e3040'
-    },
-    btnText: {
-        color: '#000000',
-        fontSize: 18,
-    },
-    login: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        marginBottom: 15,
-    },
-    error: {
-        borderColor: '#940c0c',
-        backgroundColor: '#940c0c',
-    }
-})
+const StylesComunes = CommonStyles;
+

@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, SafeAreaView, StatusBar, LogBox} from 'react-native';
 import {decode, encode} from 'base-64';
-import Autentificacion from './src/components/login/Autentificacion';
+import Autentificacion from './src/screens/login/Autentificacion';
 import firebase from './src/utils/firebase';
 import 'firebase/auth';
-import ListBirthday from './src/components/ListBirthday';
+import ListBirthday from './src/screens/birthday/ListBirthday';
 
 if (!global.btoa) global.btoa = encode;
 if (!global.atob) global.atob = decode;

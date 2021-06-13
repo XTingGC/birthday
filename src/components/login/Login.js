@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import {validateEmail} from '../../utils/validaciones';
 import firebase from '../../utils/firebase';
+import CommonStyles from '../../../assets/styles/CommonStyles';
 
 export default function Login(props) {
     const { changeForm } = props;
@@ -35,24 +36,24 @@ export default function Login(props) {
     return (
         <>
             <TextInput 
-                style={[styles.input, formError.email && styles.error]}
+                style={[StylesComunes.input, formError.email && StylesComunes.error]}
                 placeholder="Correo electrónico"
                 placeholderTextColor="#969696"
                 onChange={(e) => onChange(e, 'email')}
             />
             <TextInput
-                style={[styles.input, formError.password && styles.error]}
+                style={[StylesComunes.input, formError.password && StylesComunes.error]}
                 placeholder="Contraseña"
                 placeholderTextColor="#969696"
                 secureTextEntry={true}
                 onChange={(e) => onChange(e, 'password')}
             />
             <TouchableOpacity onPress={login}>
-                <Text style={styles.btnText}>Iniciar Sesión</Text>
+                <Text style={StylesComunes.btnText}>Iniciar Sesión</Text>
             </TouchableOpacity>
-            <View style={styles.registrarse}>
+            <View style={StylesComunes.registrarse}>
             <TouchableOpacity  onPress={changeForm}>
-                <Text style={styles.btnText}>Registrarse</Text>
+                <Text style={StylesComunes.btnText}>Registrarse</Text>
             </TouchableOpacity>
             </View>
           
@@ -67,30 +68,5 @@ function defaultValue(){
     }
 }
 
-const styles = StyleSheet.create({
-    input: {
-        height: 40,
-        color: '#fff',
-        width: '80%',
-        marginBottom: 25,
-        backgroundColor: '#1e3040',
-        paddingHorizontal: 20,
-        borderRadius: 50,
-        fontSize: 18,
-        borderWidth: 1,
-        borderColor: '#1e3040'
-    },
-    btnText: {
-        color: '#000000',
-        fontSize: 18,
-    },
-    registrarse: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        marginBottom: 15,
-    },
-    error: {
-        borderColor: '#940c0c',
-        backgroundColor: '#940c0c',
-    }
-})
+const StylesComunes = CommonStyles;
+

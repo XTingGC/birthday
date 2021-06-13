@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { StyleSheet, View, ScrollView, Alert } from 'react-native';
 import moment from 'moment';
 import AddBirthday from '../../components/birthday/AddBirthday';
-import ActionBar from '../components/ActionBar';
+import ActionBar from '../../components/birthday/ActionBar';
 import Birthday from '../../components/birthday/Birthday';
 import firebase from '../../utils/firebase';
 import 'firebase/firestore';
